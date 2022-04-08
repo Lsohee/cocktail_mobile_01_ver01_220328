@@ -1,0 +1,80 @@
+
+/* ------------header----------------------------------------------------------------------------------- */
+.root>div{
+  border: 2px solid lawngreen;
+}
+.root>div:nth-child(1){
+  width:424px;
+  height:300px;
+}
+.root>div:nth-child(1)>div:nth-child(-n+3){
+  width: 38px;
+  height:5px;
+  background-color: #c4c4c4;
+  margin-top: 9px;
+  margin-left: 5px;
+}
+.root>div:nth-child(1)>div:nth-child(4){
+  width:424px;
+  height:226px;
+  background-color: #c4c4c4;
+  margin-top: 30px;
+}
+/* ------------main-------------------------------------------------------------------------------------- */
+.root>div:nth-child(2){
+  width: 424px;
+  height:212px;
+  display: flex;
+  flex-direction: row;
+}
+.root>div:nth-child(2)>div:nth-child(1){
+  width:386px;
+  height:51px;
+  background-color: #c4c4c4;
+  position:relative;
+  z-index: 1;
+  left: 100px;
+}
+.root>div:nth-child(2)>div:nth-child(n+2){
+  width: 88px;
+  height: 90px;
+  background-color: #c4c4c4;
+  position: relative;
+  top:100px;
+  right:100px;
+  margin:10px;
+  z-index: 2;
+}
+/* 왜 .root>div:nth-child(2)>div:nth-child(n+2)릐 크기를 변경하면 .root>div:nth-child(2)>div:nth-child(1)의 크기도 변하나요? */
+/* 여기서 .root>div:nth-child(2)>div:nth-child(1)과 .root>div:nth-child(n+2)를 지금처럼 div를 새로 나누지 않고 병렬방식을 다르게 할 수 있을까요? */
+/* ----------bottom--------------------------------------------------------------------------------------- */
+.root>div:nth-child(3){
+width:424px;
+height:400px;
+display: flex;
+align-items: center;
+flex-direction: column;
+}
+.root>div:nth-child(3)>div{
+width:410px;
+height:188px;
+border:1px solid blue;
+display: flex;
+justify-content: center;
+align-items:flex-end;
+}
+
+.root>div:nth-child(3)>div:nth-child(1)>div{
+width: 150px;
+height:120px;
+background-color: #c4c4c4;
+margin:10px;
+margin-left: 20px;
+}
+.root>div:nth-child(3)>div:nth-child(2)>div{
+width: 400px;
+height:140px;
+background-color: #c4c4c4;
+margin:10px;
+margin-left: 20px;
+}
